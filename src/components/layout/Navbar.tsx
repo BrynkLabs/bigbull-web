@@ -91,7 +91,7 @@ const Navbar = () => {
                 <h4>About us</h4>
               </div>
               <div>
-                //Todo Event Card
+                {/* //Todo Event Card */}
               </div>
               <p
                 style={{ fontFamily: "TT-Supermolot-Neue-Trial-Extended" }}

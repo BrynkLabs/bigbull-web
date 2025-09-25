@@ -60,7 +60,6 @@ const Footer = () => {
             <p className="font-regular leading-[1.5] text-[12] tracking-[2px]">
               Powered By
             </p>
-            <p>
               <a href="https://brynklab.com" rel="noopener noreferrer">
                 <div className="relative w-[142.61] h-[27.56] sm:w-[197.03] sm:h-[37.71]">
                   <Image
@@ -71,7 +70,6 @@ const Footer = () => {
                   />
                 </div>
               </a>
-            </p>
           </div>
         </div>
       </div>

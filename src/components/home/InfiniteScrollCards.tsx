@@ -1,37 +1,42 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 interface InfiniteScrollCardsProps {
   images: string[];
-  scrollSpeed?: number; // seconds for full scroll
-  reverse?: boolean; // scroll direction
+  scrollSpeed?: number; 
+  reverse?: boolean; 
 }
 
 const InfiniteScrollCards: React.FC<InfiniteScrollCardsProps> = ({
   images,
-  scrollSpeed,
-  reverse,
+  scrollSpeed = 60,
+  reverse = false,
 }) => {
-  const duplicatedEvents = [...images, ...images, ...images];
+  const [containerHeight, setContainerHeight] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  const cardWidth = 329.5; // desktop width
-  const rotationAngle = 11.63; // degrees
-  const extraHeight = Math.ceil(cardWidth * Math.sin((rotationAngle * Math.PI) / 180));
+  const duplicatedEvents = [...images, ...images];
+
+  useEffect(() => {
+    if (containerRef.current) {
+      setContainerHeight(containerRef.current.scrollHeight / 2);
+    }
+  }, []);
 
   return (
     <div className="min-w-[200.95px] sm:min-w-[329.5px] transform rotate-[11.63deg] -mt-[50px]">
-      {/* Outer container to prevent clipping */}
       <div
         className="overflow-hidden relative"
         style={{
-          height: `calc(100% + ${extraHeight}px)`, // Add extra height to avoid clipping
+          height: `calc(100% + 50px)`,
         }}
       >
         <div
-          className="flex flex-col gap-4 animate-vertical-scroll"
+          ref={containerRef}
+          className="flex flex-col gap-4 animate-scroll"
           style={{
-            animation: `vertical-scroll ${scrollSpeed || 60}s linear infinite ${
+            animation: `${scrollSpeed}s linear infinite scrollAnimation ${
               reverse ? "reverse" : ""
             }`,
           }}
@@ -54,20 +59,20 @@ const InfiniteScrollCards: React.FC<InfiniteScrollCardsProps> = ({
       </div>
 
       <style jsx>{`
-        @keyframes vertical-scroll {
+        @keyframes scrollAnimation {
           0% {
             transform: translateY(0);
           }
           100% {
-            transform: translateY(-${images.length * 400 + extraHeight}px);
+            transform: translateY(-${containerHeight}px);
           }
         }
 
-        .animate-vertical-scroll {
-          animation: vertical-scroll 60s linear infinite;
+        .animate-scroll {
+          animation-play-state: running;
         }
 
-        .animate-vertical-scroll:hover {
+        .animate-scroll:hover {
           animation-play-state: paused;
         }
       `}</style>
