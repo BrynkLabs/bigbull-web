@@ -1,0 +1,549 @@
+@import "tailwindcss";
+
+:root {
+  --background: #020202;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #020202;
+    --foreground: #ededed;
+  }
+}
+
+
+/* ─────────────── Normal Width ─────────────── */
+
+/* Thin */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Thin-BF66b0efd16e95b.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Thin-Italic-BF66b0efd079bf9.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+/* Extra Light */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-ExtraLight-BF66b0efce68377.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-ExtraLight-Italic-BF66b0efd09a960.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+/* Light */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Light-BF66b0efcf08276.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Light-Italic-BF66b0efd049c6d.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Regular */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Regular-BF66b0efd13475e.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Italic-BF66b0efd07d67f.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Medium */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Medium-BF66b0efd0dbe09.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Medium-Italic-BF66b0efd34e9df.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* DemiBold */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-DemiBold-BF66b0efcdd8e30.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-DemiBold-Italic-BF66b0efd0112ac.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* Bold */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Bold-BF66b0efd0caf3b.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Bold-Italic-BF66b0efcf8caa3.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Extra Bold */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-ExtraBold-BF66b0efd1d7bb9.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-ExtraBold-Italic-BF66b0efcfe66f7.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+/* Black */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Black-BF66b0efd04ec73.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Black-Italic-BF66b0efcf4aed3.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* ─────────────── Condensed Width ─────────────── */
+
+/* Thin Condensed */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Condensed";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Condensed-Thin-BF66b0efcf1bfd1.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Condensed";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Condensed-Thin-Italic-BF66b0efcec4840.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+/* Extra Light Condensed */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Condensed";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Condensed-ExtraLight-BF66b0efcf77ab2.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Condensed";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Condensed-ExtraLight-Italic-BF66b0efd08e27a.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+/* Light Condensed */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Condensed";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Condensed-Light-BF66b0efce7d471.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Condensed";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Condensed-Light-Italic-BF66b0efd0de166.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Regular Condensed */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Condensed";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Condensed-Regular-BF66b0efce5f5dc.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Condensed";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Condensed-Italic-BF66b0efd308193.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Medium Condensed */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Condensed";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Condensed-Medium-BF66b0efce9ebb3.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Condensed";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Condensed-Medium-Italic-BF66b0efd1364c0.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* DemiBold Condensed */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Condensed";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Condensed-DemiBold-BF66b0efce5d63f.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Condensed";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Condensed-DemiBold-Italic-BF66b0efcf499b9.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* Bold Condensed */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Condensed";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Condensed-Bold-BF66b0efce5d63f.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Condensed";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Condensed-Bold-Italic-BF66b0efcf8caa3.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Extra Bold Condensed */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Condensed";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Condensed-ExtraBold-BF66b0efce075a3.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Condensed";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Condensed-ExtraBold-Italic-BF66b0efd1341b4.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+/* Black Condensed */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Condensed";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Condensed-Black-BF66b0efce5b61d.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Condensed";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Condensed-Black-Italic-BF66b0efd113c82.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* ─────────────── Expanded Width ─────────────── */
+
+/* Thin Expanded */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Expanded";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Expanded-Thin-BF66b0efce6b147.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Expanded";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Expanded-Thin-Italic-BF66b0efcf70671.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+/* Extra Light Expanded */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Expanded";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Expanded-ExtraLight-BF66b0efd033aba.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Expanded";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Expanded-ExtraLight-Italic-BF66b0efd19aa5f.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+/* Light Expanded */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Expanded";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Expanded-Light-BF66b0efd077b74.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Expanded";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Expanded-Light-Italic-BF66b0efd13dc71.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Regular Expanded */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Expanded";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Expanded-Regular-BF66b0efd1c23f2.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Expanded";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Expanded-Italic-BF66b0efd04512a.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* DemiBold Expanded */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Expanded";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Expanded-DemiBold-BF66b0efcd817f5.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Expanded";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Expanded-DemiBold-Italic-BF66b0efd15ec7b.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* Bold Expanded */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Expanded";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Expanded-Bold-BF66b0efd0cf273.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Expanded";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Expanded-Bold-Italic-BF66b0efcfe722f.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Extra Bold Expanded */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Expanded";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Expanded-ExtraBold-BF66b0efd308022.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Expanded";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Expanded-ExtraBold-Italic-BF66b0efd082dba.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+/* Black Expanded */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Expanded";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Expanded-Black-BF66b0efd137d37.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Expanded";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Expanded-Black-Italic-BF66b0efcedf1fc.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* ─────────────── Extended Width ─────────────── */
+
+/* Thin Extended */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Extended";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Extended-Thin-BF66b0efd0a37d1.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Extended";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Extended-Thin-Italic-BF66b0efd1c7e7e.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+/* Extra Light Extended */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Extended";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Extended-ExtraLight-BF66b0efd160229.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Extended";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Extended-ExtraLight-Italic-BF66b0efce879a2.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+/* Light Extended - Note: Missing Light Extended file, using Light Italic */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Extended";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Extended-Light-Italic-BF66b0efd0a70bc.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Regular Extended */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Extended";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Extended-Regular-BF66b0efd34f76c.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Medium Extended */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Extended";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Extended-Medium-BF66b0efcf3d28c.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Extended";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Extended-Medium-Italic-BF66b0efd1a4926.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* DemiBold Extended */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Extended";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Extended-DemiBold-BF66b0efd075f92.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Extended";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Extended-DemiBold-Italic-BF66b0efce596f7.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* Bold Extended */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Extended";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Extended-Bold-BF66b0efd0d388e.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Extended";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Extended-Bold-Italic-BF66b0efcddc483.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Extra Bold Extended */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Extended";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Extended-ExtraBold-BF66b0efd12d61f.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Extended";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Extended-ExtraBold-Italic-BF66b0efce17068.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+/* Black Extended */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Extended";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Extended-Black-BF66b0efcea2bb3.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Extended";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Extended-Black-Italic-BF66b0efcf48e70.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* ─────────────── Variable Font ─────────────── */
+@font-face {
+  font-family: "TT-Supermolot-Neue-Trial-Variable";
+  src: url("/fonts/TT-Supermolot-Neue-Trial-Variable-BF66b0efd3814ed.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+/* ─────────────── Usage Examples ─────────────── */
+/*
+.normal-text {
+  font-family: "TT-Supermolot-Neue-Trial", sans-serif;
+  font-weight: 400;
+}
+
+.condensed-text {
+  font-family: "TT-Supermolot-Neue-Trial-Condensed", sans-serif;
+  font-weight: 700;
+}
+
+.expanded-text {
+  font-family: "TT-Supermolot-Neue-Trial-Expanded", sans-serif;
+  font-weight: 600;
+}
+
+.extended-text {
+  font-family: "TT-Supermolot-Neue-Trial-Extended", sans-serif;
+  font-weight: 500;
+}
+
+.variable-text {
+  font-family: "TT-Supermolot-Neue-Trial-Variable", sans-serif;
+  font-weight: 350;
+  font-variation-settings: "wght" 350;
+}
+*/
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "TT-Supermolot-Neue-Trial", sans-serif;
+}
