@@ -3,8 +3,8 @@ import InfiniteScrollCards from "./InfiniteScrollCards";
 
 const Hero = () => {
   return (
-    <section className="aspect-[375/640] sm:aspect-[1440/1024] w-full relative overflow-hidden">
-      <div className="absolute h-full w-full top-0 left-0 flex gap-[20px] justify-center">
+    <section className="min-h-screen w-full relative overflow-hidden bg-black pt-20 sm:pt-24 md:pt-28 lg:pt-32">
+      <div className="absolute inset-0 flex h-full gap-4 sm:gap-5 md:gap-6 lg:gap-8 items-center justify-center">
         {new Array(4).fill(0).map((_, index) => {
           const quarter = Math.floor(images.length / 4);
           const start = index * quarter;
@@ -14,15 +14,12 @@ const Hero = () => {
             <InfiniteScrollCards
               key={index}
               images={images.slice(start, end)}
-              scrollSpeed={50 + index * 10} 
-              reverse={index % 2 === 0} 
+              scrollSpeed={50 + index * 10}
+              reverse={false}
             />
           );
         })}
       </div>
-      <div className="absolute top-0 left-0 w-full h-full ">
-        // Todo Content 
-      </div >
     </section>
   );
 };
