@@ -24,7 +24,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <Image
-              src="/layout/social-whatsapp.svg"
+              src="/images/layout/social-whatsapp.svg"
               height={28}
               width={28}
               alt="WhatsApp icon to contact Big Bull"
@@ -36,7 +36,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <Image
-              src="/layout/social-instagram.svg"
+              src="/images/layout/social-instagram.svg"
               height={28}
               width={28}
               alt="Instagram icon for Big Bull Hyd profile"
@@ -60,7 +60,6 @@ const Footer = () => {
             <p className="font-regular leading-[1.5] text-[12] tracking-[2px]">
               Powered By
             </p>
-            <p>
               <a href="https://brynklab.com" rel="noopener noreferrer">
                 <div className="relative w-[142.61] h-[27.56] sm:w-[197.03] sm:h-[37.71]">
                   <Image
@@ -71,7 +70,6 @@ const Footer = () => {
                   />
                 </div>
               </a>
-            </p>
           </div>
         </div>
       </div>
