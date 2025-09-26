@@ -24,7 +24,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <Image
-              src="/layout/social-whatsapp.svg"
+              src="/images/layout/social-whatsapp.svg"
               height={28}
               width={28}
               alt="WhatsApp icon to contact Big Bull"
@@ -36,7 +36,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <Image
-              src="/layout/social-instagram.svg"
+              src="/images/layout/social-instagram.svg"
               height={28}
               width={28}
               alt="Instagram icon for Big Bull Hyd profile"

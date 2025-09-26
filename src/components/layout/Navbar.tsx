@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <nav
       aria-label="Main Navigation"
-      className="fixed top-6 sm:top-10 px-[24px] flex w-full justify-center z-[1]"
+      className="fixed top-6 sm:top-10 px-[24px] flex w-full justify-center z-[100]"
     >
       <div
         className="
@@ -90,7 +90,7 @@ const Navbar = () => {
                 <h4>All Events</h4>
                 <h4>About us</h4>
               </div>
-              <div>
+              <div>   
                 {/* //Todo Event Card */}
               </div>
               <p
