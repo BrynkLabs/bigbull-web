@@ -31,11 +31,11 @@ const InfiniteScrollCards: React.FC<InfiniteScrollCardsProps> = ({
 
     const timer = setTimeout(calculateHeight, 100);
     
-    window.addEventListener('resize', calculateHeight);
+    window&&window.addEventListener('resize', calculateHeight);
     
     return () => {
       clearTimeout(timer);
-      window.removeEventListener('resize', calculateHeight);
+      window&&window.removeEventListener('resize', calculateHeight);
     };
   }, [images]);
 
@@ -51,7 +51,7 @@ const InfiniteScrollCards: React.FC<InfiniteScrollCardsProps> = ({
                 className="relative w-full rounded-lg overflow-hidden"
               >
                 <Image
-                  src={`/home/${image}`}
+                  src={`/images/home/${image}`}
                   alt={`image-${index}`}
                   width={329}
                   height={473}
@@ -88,7 +88,7 @@ const InfiniteScrollCards: React.FC<InfiniteScrollCardsProps> = ({
               className="relative w-full rounded-lg overflow-hidden"
             >
               <Image
-                src={`/home/${image}`}
+                src={`/images/home/${image}`}
                 alt={`image-${index}`}
                 width={329}
                 height={473}
