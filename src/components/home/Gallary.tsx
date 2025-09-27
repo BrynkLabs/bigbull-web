@@ -14,7 +14,7 @@ const images: string[] = [
 const Gallary = ({}) => {
   return (
     <section className="mt-[51px] sm:mt-[100px]">
-       <h2 className="uppercase font-[700] sm:text-[40px] text-[24px] mb-[24px] sm:mb-[50px] text-center " style={{fontFamily: "TT-Supermolot-Neue-Trial-Expanded"}}>Gallery</h2>
+       <h2 className="uppercase font-[700] sm:text-[40px] text-[24px] mb-[24px] sm:mb-[50px] text-center text-white " style={{fontFamily: "TT-Supermolot-Neue-Trial-Expanded"}}>Gallery</h2>
       <Marquee
         className="absolute bottom-0 left-0 w-full bg-black text-white py-3 px-6 z-20"
         autoFill={true}
