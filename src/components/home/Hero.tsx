@@ -138,7 +138,7 @@ const Hero: React.FC = () => {
                         color-interpolation-filters="sRGB"
                       >
                         <feFlood
-                          flood-opacity="0"
+                          floodOpacity="0"
                           result="BackgroundImageFix"
                         />
                         <feBlend
